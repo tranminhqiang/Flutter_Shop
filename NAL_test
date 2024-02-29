@@ -1,0 +1,34 @@
+void main() {
+  String str = "aahawccooqw";
+  List bienThe = ["a", "e", "o"];
+  List bienThe2 = ["a", "u", "o"];
+  int a = 0;
+  int b = 0;
+  int c = 0;
+  List<String> strarray = str.split("");
+  for (int i = 0; i < strarray.length; i++) {
+    for (int j = 0; j < bienThe.length; j++) {
+      if (strarray[i] == bienThe[j] && strarray[i] == strarray[i + 1]) {
+        a += 1;
+      }
+    }
+  }
+  for (int i = 0; i < strarray.length; i++) {
+    for (int j = 0; j < bienThe2.length; j++) {
+      if (strarray[i] == bienThe[j] && strarray[i + 1] == "w") {
+        b += 1;
+      }
+    }
+  }
+  for(int i=1;i<=strarray.length;i++){
+    if(strarray[i].toString()=="w"){
+      for(int j=0;j<bienThe2.length;j++){
+        if(strarray[i-1]==bienThe2[j]){
+          c+=1;
+        }
+      }
+    }
+  }
+  var kq =a+b+c;
+  print(kq);
+}
